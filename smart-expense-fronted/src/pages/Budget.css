@@ -1,0 +1,241 @@
+/* ===== Budget Page ===== */
+
+.budget-page {
+  min-height: 100vh;
+  padding: 36px;
+  background: #f5f7fb;
+  color: #1e293b;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.budget-header {
+  margin-bottom: 30px;
+}
+
+.budget-header h1 {
+  margin: 0 0 10px;
+  color: #172554;
+  font-size: 30px;
+  font-weight: 750;
+  letter-spacing: -0.6px;
+}
+
+.budget-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Main Budget Card */
+
+.budget-card {
+  width: 100%;
+  max-width: 650px;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+  box-sizing: border-box;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.budget-card:hover {
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+.budget-card h2 {
+  margin: 0 0 10px;
+  color: #172554;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.budget-description {
+  margin: 0 0 28px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Form */
+
+.budget-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.budget-card label {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.budget-card input {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 15px;
+  border: 1px solid #dbe3ef;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.budget-card input::placeholder {
+  color: #94a3b8;
+}
+
+.budget-card input:hover {
+  border-color: #a5b4fc;
+}
+
+.budget-card input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+/* Save Button */
+
+.budget-card form button {
+  min-height: 48px;
+  margin-top: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 650;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(79, 70, 229, 0.2);
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.budget-card form button:hover {
+  background: linear-gradient(135deg, #4338ca, #3730a3);
+  box-shadow: 0 7px 18px rgba(79, 70, 229, 0.28);
+  transform: translateY(-1px);
+}
+
+.budget-card form button:active {
+  transform: translateY(0);
+}
+
+/* Current Budget */
+
+.current-budget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 28px;
+  padding: 22px;
+  border: 1px solid #c7d2fe;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+}
+
+.current-budget span {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.current-budget strong {
+  color: #4338ca;
+  font-size: 25px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+/* Success and Error Messages */
+
+.budget-message {
+  margin: 20px 0 0;
+  padding: 12px 15px;
+  border: 1px solid #bbf7d0;
+  border-radius: 9px;
+  background: #f0fdf4;
+  color: #15803d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Loading */
+
+.budget-card > p:not(.budget-description):not(.budget-message) {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .budget-page {
+    padding: 24px;
+  }
+
+  .budget-header h1 {
+    font-size: 26px;
+  }
+
+  .budget-card {
+    padding: 25px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .budget-page {
+    padding: 18px 14px;
+  }
+
+  .budget-header {
+    margin-bottom: 22px;
+  }
+
+  .budget-header h1 {
+    font-size: 24px;
+  }
+
+  .budget-header p {
+    font-size: 13px;
+  }
+
+  .budget-card {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .budget-card h2 {
+    font-size: 20px;
+  }
+
+  .current-budget {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+  }
+
+  .current-budget strong {
+    font-size: 23px;
+  }
+}

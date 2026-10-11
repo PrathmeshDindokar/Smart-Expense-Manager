@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  background: #111c3a;
+  color: #ffffff;
+  padding: 30px 18px;
+}
+
+.sidebar h2 {
+  font-size: 23px;
+  margin: 0 0 40px;
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 13px 14px;
+  border-radius: 9px;
+  color: #cbd5e8;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.2s ease;
+}
+
+.sidebar nav a:hover {
+  background: #24345e;
+  color: #ffffff;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 40px;
+}
+
+.main-content > h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 750;
+  color: #14213d;
+}
+
+.main-content > p {
+  margin: 0 0 30px;
+  color: #68758b;
+  font-size: 15px;
+}
+
+/* Summary cards */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(25, 42, 70, 0.05);
+}
+
+.dashboard-cards .card h3 {
+  margin: 0 0 18px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #69768c;
+}
+
+.dashboard-cards .card h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 750;
+  color: #172b4d;
+}
+
+/* AI insights card */
+.main-content > .card {
+  max-width: 100%;
+  padding: 30px;
+}
+
+.main-content > .card h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #172b4d;
+}
+
+.main-content > .card p {
+  color: #68758b;
+  line-height: 1.7;
+}
+
+.main-content button {
+  margin-top: 12px;
+  border: none;
+  border-radius: 9px;
+  padding: 13px 20px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.main-content button:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive layout */
+@media (max-width: 1000px) {
+  .main-content {
+    padding: 28px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+  }
+
+  .sidebar h2 {
+    margin-bottom: 18px;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .main-content {
+    padding: 22px 16px;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+}
+/* Professional Logout Button */
+.logout-button {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px 16px;
+  background: #fff1f2;
+  color: #dc2626;
+  border: 1px solid #fecdd3;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.logout-button:hover {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+.logout-button:focus-visible {
+  outline: 2px solid #dc2626;
+  outline-offset: 3px;
+}

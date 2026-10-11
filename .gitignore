@@ -1,0 +1,21 @@
+# Frontend
+smart-expense-frontend/node_modules/
+smart-expense-frontend/dist/
+smart-expense-frontend/.env
+smart-expense-frontend/.env.*
+
+# Backend
+**/target/
+**/.env
+**/.env.*
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
