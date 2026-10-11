@@ -43,3 +43,6 @@ src/main/resources/application.properties
 # Backend credentials
 smart-expense-manager/src/main/resources/application.properties
 smart-expense-manager/.env
+
+.env
+application.properties
